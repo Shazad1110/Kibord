@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تاقیکردنەوەی خێرایی نووسین</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+    <div class="container">
+        <div id="mobile-message" class="hidden">
+            <h1>تکایە کۆمپیوتەر بەکاربێنە</h1>
+            <p>ئەم ماڵپەڕە بۆ تاقیکردنەوەی خێرایی نووسینی کیبۆردی کۆمپیوتەر دیزاین کراوە.</p>
+        </div>
+        <div id="game-mode-selection" class="game-mode-selection">
+            <h2>هەڵبژاردنی جۆری تاقیکردنەوە</h2>
+ 
+            <div class="mode-options">
+                <div class="mode-option" data-mode="time">
+                    <h3>تاقیکردنەوە بە کات</h3>
+                    <p>تاقیکردنەوەکە بە کاتەوە تەواو دەبێت</p>
+                    <div class="mode-settings">
+                        <div class="setting-option" data-time="15">15 چرکە</div>
+                        <div class="setting-option" data-time="30">30 چرکە</div>
+                        <div class="setting-option" data-time="60">60 چرکە</div>
+                    </div>
+                </div>
+ 
+                <div class="mode-option" data-mode="words">
+                    <h3>تاقیکردنەوە بە وشە</h3>
+                    <p>تاقیکردنەوەکە کاتێک هەموو وشەکان تەواو دەبێت</p>
+                    <div class="mode-settings">
+                        <div class="setting-option" data-words="15">15 وشە</div>
+                        <div class="setting-option" data-words="25">25 وشە</div>
+                        <div class="setting-option" data-words="50">50 وشە</div>
+                    </div>
+                </div>
+            </div>
+ 
+            <button id="start-game-btn" class="start-game-btn" disabled>دەستپێکردن</button>
+        </div>
+ 
+        <div id="app" class="hidden">
+            <header>
+                <h1>تاقیکردنەوەی خێرایی نووسین</h1>
+            </header>
+ 
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="label">وشە/خولەک</div>
+                    <div id="wpm" class="value">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="label">کاتی ماوە</div>
+                    <div id="timer" class="value">30</div>
+                </div>
+                <div class="stat-item">
+                    <div class="label">وردی</div>
+                    <div id="accuracy" class="value">100%</div>
+                </div>
+            </div>
+ 
+ 
+            <div id="text-to-type-container" class="noselect">
+                <div id="text-to-type">
+                    <div class="word active">کوردستان</div>
+                    <div class="word">هەولێر</div>
+                    <div class="word">سلێمانی</div>
+                    <div class="word">ژیان</div>
+                    <div class="word">ئازادی</div>
+                    <div class="word">سەربەستی</div>
+                    <div class="word">ڕێگا</div>
+                    <div class="word">کتێب</div>
+                    <div class="word">قەڵەم</div>
+                    <div class="word">خوێندن</div>
+                    <div class="word">زانست</div>
+                    <div class="word">هونەر</div>
+                    <div class="word">مۆسیقا</div>
+                    <div class="word">ئاواز</div>
+                    <div class="word">چیرۆک</div>
+                    <div class="word">ڕۆمان</div>
+                    <div class="word">ئاسمان</div>
+                    <div class="word">زەوی</div>
+                    <div class="word">چیا</div>
+                    <div class="word">دەریا</div>
+                    <div class="word">ڕووبار</div>
+                    <div class="word">باخچە</div>
+                    <div class="word">گوڵ</div>
+                    <div class="word">درەخت</div>
+                    <div class="word">هاوین</div>
+                </div>
+            </div>
+ 
+            <input type="text" id="input-box" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+ 
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="restart-btn" style="margin-right: 10px;">دەستپێکردنەوە</button>
+                <button id="history-btn" onclick="showSpeedHistory()">مێژووی خێرایی</button>
+            </div>
+        </div>
+    </div>
+ 
+    <footer class="copyright-footer">
+        <p>©  شابڵۆد 2025</p>
+    </footer>
+ 
+    <script src="script.js"></script>
+</body>
+ 
+</html>
